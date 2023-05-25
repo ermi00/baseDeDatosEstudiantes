@@ -6,15 +6,22 @@ botonEnviarRegistroAlumnos.addEventListener("click", function(){
     let inputAEdad = document.getElementById("inputEdad").value
 
     registrarAlumno(inputNombre, inputApellido, inputAEdad);
-    
+
+    let filaDeTabla = document.getElementById("tr");
+    let nuevotd = document.createElement("td");
+
+    nuevotd.textContent = `${alumnos[0].nombre}`
+    filaDeTabla.appendChild(nuevotd);
+
+    nuevotd.textContent = `${alumnos[0].apellido}`
+    filaDeTabla.appendChild(nuevotd);
 });
 
-let botonEnviarMaterias = document.getElementById("botonEnviarMaterias");
-botonEnviarMaterias.addEventListener("click", function(){
 
-    let selectMaterias = document.getElementById("Materias").value
-    let selectTalleres = document.getElementById("Talleres").value
-    let selectDeportivas = document.getElementById("Deportivas").value
+// COMO CREAR O AGREGAR ALGO EN HTML
+// let listaDeCompras = document.getElementById("listaDeCompras");
+// let nuevoli = document.createElement("li")
 
-    console.log(selectMaterias, selectTalleres, selectDeportivas);
-});
+// nuevoli.textContent = "Jamon Serrano"
+// listaDeCompras.appendChild(nuevoli);
+
