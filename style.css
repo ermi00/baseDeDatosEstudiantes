@@ -1,0 +1,30 @@
+body{
+    font-family: Helvetica, sans-serif;
+}
+
+label{
+    margin: 5px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input{
+    padding: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 5px;
+}
+
+button{
+    padding: 15px;
+    margin: 5px;
+}
+
+select{
+    padding: 15px;
+    margin: 5px;
+}

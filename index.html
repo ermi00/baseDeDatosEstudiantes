@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+    <script defer src="./datos.js"></script>
+    <title>Institucion Educativa</title>
+</head>
+<body>
+    <h1>Institucion Educativa CDMX</h1>
+    <main>
+        <section>
+            <h2>REGISTRO ALUMNOS</h2>
+            <form action="">
+                <label for="">Ingresa tus datos personales</label>
+                <input type="text" placeholder="Ingresa tu nombre" id="inputNombre">
+                <input type="text" placeholder="Ingresa tu apellido" id="inputApellido">
+                <input type="text" placeholder="Ingresa tu edad" id="inputEdad">
+                <button type="button" id="botonEnviarRegistroAlumnos">ENVIAR</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>REGISTRO ASIGNATURAS</h2>
+            <p>Escoge las asignaturas que deseas estudiar durante tu año escolar.</p>
+            <form action="">
+                <select name="" id="Materias">
+                    <option value="Español">Español</option>
+                    <option value="Matematicas">Matematicas</option>
+                    <option value="Historia">Historia</option>
+                    <option value="Quimica">Quimica</option>
+                    <option value="Ingles">Ingles</option>
+                </select>
+                
+                <select name="" id="Talleres">
+                    <option value="Diseño">Diseño</option>
+                    <option value="Musica">Musica</option>
+                    <option value="Electronica">Electronica</option>
+                    <option value="Cocina">Cocina</option>
+                    <option value="Artes">Artes</option>
+                </select>
+
+                <select name="" id="Deportivas">
+                    <option value="Futbol">Futbol</option>
+                    <option value="Basquetbol">Basquetbol</option>
+                    <option value="Voleybol">Voleybol</option>
+                    <option value="Tenis">Tenis</option>
+                    <option value="Carreras">Carreras</option>
+                </select>
+                <button type="button" id="botonEnviarMaterias">ENVIAR</button> 
+            </form>
+        </section>
+    </main>
+</body>
+</html>
