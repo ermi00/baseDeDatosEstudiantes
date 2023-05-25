@@ -6,16 +6,23 @@ botonEnviarRegistroAlumnos.addEventListener("click", function(){
     let inputAEdad = document.getElementById("inputEdad").value
 
     registrarAlumno(inputNombre, inputApellido, inputAEdad);
-
-    let filaDeTabla = document.getElementById("tr");
-    let nuevotd = document.createElement("td");
-
-    nuevotd.textContent = `${alumnos[0].nombre}`
-    filaDeTabla.appendChild(nuevotd);
-
-    nuevotd.textContent = `${alumnos[0].apellido}`
-    filaDeTabla.appendChild(nuevotd);
 });
+
+
+function agregarAlumnoLista(){
+    let tr = document.createElement("tr");
+    let td = document.createElement("td");
+
+    td.textContent = `${alumnos[0].nombre}`
+};
+
+
+
+
+
+
+
+
 
 
 // COMO CREAR O AGREGAR ALGO EN HTML
