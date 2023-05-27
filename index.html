@@ -18,26 +18,23 @@
                 <label for="">Ingresa tus datos personales</label>
                 <input type="text" placeholder="Ingresa tu nombre" id="inputNombre">
                 <input type="text" placeholder="Ingresa tu apellido" id="inputApellido">
-                <input type="text" placeholder="Ingresa tu edad" id="inputEdad">
+                <input type="number" placeholder="Ingresa tu edad" id="inputEdad">
                 <button type="button" id="botonEnviarRegistroAlumnos">ENVIAR</button>
+                <button type="reset">BORRAR</button>
             </form>
         </section>
 
         <section>
-            <table>
-                <tr>
+            <table id="tablaAlumnos">
+                <thead>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Edad</th>
-                </tr>
-                <tr>
-                    <td>Miguel</td>
-                    <td>Gonzalez</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>Jesus</td>
-                </tr>
+                    <th>Seleccionar</th>
+                </thead>
+                <tbody>
+                    
+                </tbody>
             </table>
         </section>
     </main>

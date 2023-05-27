@@ -5,30 +5,40 @@ botonEnviarRegistroAlumnos.addEventListener("click", function(){
     let inputApellido = document.getElementById("inputApellido").value
     let inputAEdad = document.getElementById("inputEdad").value
 
-    registrarAlumno(inputNombre, inputApellido, inputAEdad);
+    if(inputAEdad.length > 2){
+        alert("Ingresa una edad valida")
+    } else{
+        registrarAlumno(inputNombre, inputApellido, inputAEdad);
+        agregarAlumnoLista();
+    }
 });
 
 
 function agregarAlumnoLista(){
-    let tr = document.createElement("tr");
-    let td = document.createElement("td");
+    let tablaAlumnos = document.getElementById("tablaAlumnos");
+    let tablaAlumnosRef = tablaAlumnos.insertRow(-1);
 
-    td.textContent = `${alumnos[0].nombre}`
-};
+    let nuevaCeldaRef = tablaAlumnosRef.insertCell(0);
+    for (let i = 0; i < alumnos.length; i++){
+        nuevaCeldaRef.textContent = `${alumnos[i].nombre}`
+    }
 
+    nuevaCeldaRef = tablaAlumnosRef.insertCell(1);
+    for (let i = 0; i < alumnos.length; i++){
+        nuevaCeldaRef.textContent = `${alumnos[i].apellido}`
+    }
 
+    nuevaCeldaRef = tablaAlumnosRef.insertCell(2);
+    for (let i = 0; i < alumnos.length; i++){
+        nuevaCeldaRef.textContent = `${alumnos[i].edad}`
+    }
 
+    nuevaCeldaRef = tablaAlumnosRef.insertCell(3);
+    let nuevoInput = document.createElement("input");
+    nuevoInput.type = "checkbox";
+    nuevaCeldaRef.appendChild(nuevoInput);
+}
 
-
-
-
-
-
-
-// COMO CREAR O AGREGAR ALGO EN HTML
-// let listaDeCompras = document.getElementById("listaDeCompras");
-// let nuevoli = document.createElement("li")
-
-// nuevoli.textContent = "Jamon Serrano"
-// listaDeCompras.appendChild(nuevoli);
-
+function agregarGrupoAlumno(alumnoSeleccionado, grupoSeleccionado){
+    alumnoSeleccionado.push(grupoSeleccionado);
+}
